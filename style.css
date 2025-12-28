@@ -1,0 +1,255 @@
+/* ===== GLOBAL RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+  color:#fff;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 60px;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  z-index:1000;
+}
+
+header h2{
+  color:#00eaff;
+  letter-spacing:2px;
+}
+
+nav a{
+  color:white;
+  margin-left:25px;
+  text-decoration:none;
+  font-size:16px;
+  transition:0.3s;
+}
+
+nav a:hover,
+nav a.active{
+  color:#00eaff;
+  border-bottom:2px solid #00eaff;
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:120px 60px;
+  min-height:100vh;
+  text-align:center;
+}
+
+h2{
+  font-size:36px;
+  margin-bottom:20px;
+  color:#00eaff;
+}
+
+/* ===== HERO ===== */
+.hero{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-content h1{
+  font-size:48px;
+}
+
+.hero-content span{
+  color:#00eaff;
+}
+
+.hero-content h2{
+  font-size:28px;
+  margin:15px 0;
+}
+
+.hero-content p{
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #00eaff;
+  margin-bottom:25px;
+  box-shadow:0 0 30px #00eaff;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+  100%{transform:translateY(0)}
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 35px;
+  background:#00eaff;
+  color:#000;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+  transition:0.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+.btn::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transition:0.5s;
+}
+
+.btn:hover::before{
+  left:100%;
+}
+
+.btn:hover{
+  box-shadow:0 0 25px #00eaff;
+  transform:scale(1.05);
+}
+
+/* ===== ABOUT ===== */
+.about-content{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+#about p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+  line-height:1.6;
+}
+
+.about-img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #00eaff;
+  margin-bottom:20px;
+  box-shadow:0 0 20px #00eaff;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ===== PROJECTS ===== */
+.cards{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:rgba(255,255,255,0.1);
+  padding:25px;
+  border-radius:15px;
+  backdrop-filter: blur(12px);
+  transition:0.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    #00eaff,
+    transparent
+  );
+  transition:0.6s;
+}
+
+.card:hover::before{
+  left:100%;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.05);
+  box-shadow:0 0 25px #00eaff;
+}
+
+/* ===== EXPERIENCE ===== */
+#experience p{
+  font-size:20px;
+  line-height:1.6;
+}
+
+/* ===== CONTACT ===== */
+#contact p,
+#contact a{
+  font-size:18px;
+  margin:10px 0;
+  color:white;
+}
+
+#contact a:hover{
+  color:#00eaff;
+}
+
+/* ===== RESUME ===== */
+#resume{
+  background:#00eaff(0,0,0,0.3);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  padding:20px;
+  background:#000;
+  text-align:center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  header{
+    padding:15px 25px;
+  }
+
+  section{
+    padding:120px 25px;
+  }
+
+  .hero-content h1{
+    font-size:36px;
+  }
+}
