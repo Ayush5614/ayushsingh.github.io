@@ -12,7 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -33,9 +33,8 @@
 <section id="home" class="hero">
   <div class="hero-content" data-aos="fade-up">
 
-    <!-- ✅ FIXED IMAGE -->
-
-    <img src="./images/profile.jpg" alt="Ayush Singh" class="profile-img">
+    <!-- IMAGE (GITHUB SAFE) -->
+    <img src="images/profile.jpg" alt="Ayush Singh" class="profile-img">
 
     <h1>Hi, I'm <span>Ayush Singh</span></h1>
     <h2><span id="typed"></span></h2>
@@ -48,13 +47,11 @@
 <!-- ===== ABOUT ===== -->
 <section id="about" data-aos="fade-right">
   <h2>About Me</h2>
-  <div class="about-content">
-    <p>
-      I am a BCA student with strong interest in <b>Data Analytics</b> and
-      web development. I enjoy building real-world projects and
-      continuously improving my technical skills.
-    </p>
-  </div>
+  <p>
+    I am a BCA student with strong interest in <b>Data Analytics</b> and
+    web development. I enjoy building real-world projects and
+    continuously improving my technical skills.
+  </p>
 </section>
 
 <!-- ===== PROJECTS ===== -->
@@ -97,11 +94,11 @@
 <!-- ===== RESUME ===== -->
 <section id="resume" data-aos="fade-up">
   <h2>Resume</h2>
-  <p>You can download my resume below</p>
+  <p>You can view or download my resume below</p>
 
-  <!-- ✅ FIXED RESUME LINK -->
-  <a href="./resume/AyushResume.pdf" download class="btn">
-    Download Resume
+  <!-- RESUME (GITHUB SAFE) -->
+  <a href="resume/AyushResume.pdf" target="_blank" class="btn">
+    View Resume
   </a>
 </section>
 
@@ -124,8 +121,18 @@
 
 <!-- JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="./script.js"></script>
+<script src="script.js"></script>
+
+<script>
+  AOS.init();
+
+  new Typed("#typed", {
+    strings: ["Web Developer", "Data Analyst", "BCA Student"],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+</script>
 
 </body>
 </html>
-
