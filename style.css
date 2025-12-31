@@ -240,16 +240,169 @@ footer{
 }
 
 /* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-  header{
-    padding:15px 25px;
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+  .hero-content h1 {
+    font-size: 56px;
   }
 
-  section{
-    padding:120px 25px;
+  .hero-content h2 {
+    font-size: 32px;
   }
 
-  .hero-content h1{
-    font-size:36px;
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Medium screens (tablets and small desktops) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  header {
+    padding: 15px 40px;
+  }
+
+  section {
+    padding: 120px 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content h2 {
+    font-size: 30px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
+
+/* Small screens (mobile landscape) */
+@media (max-width: 767px) {
+  header {
+    padding: 15px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  section {
+    padding: 100px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content h2 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  #about p,
+  #experience p,
+  #contact p,
+  #contact a {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
+
+/* Extra small screens (mobile portrait) */
+@media (max-width: 480px) {
+  header h2 {
+    font-size: 20px;
+  }
+
+  nav a {
+    margin: 0 5px;
+    font-size: 12px;
+  }
+
+  section {
+    padding: 80px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cards {
+    margin-top: 30px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  #about p,
+  #experience p,
+  #contact p,
+  #contact a {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 12px;
+  }
+
+  footer p {
+    font-size: 12px;
   }
 }
