@@ -5,21 +5,18 @@
   <title>Ayush Singh | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- AOS Animation -->
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Typed JS -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
 <header>
   <h2>Ayush.</h2>
-  <nav>
+
+  <nav id="nav-menu">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -27,16 +24,15 @@
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
 </header>
 
-<!-- ===== HERO ===== -->
 <section id="home" class="hero">
   <div class="hero-content" data-aos="fade-up">
-
-    <!-- PROFILE IMAGE -->
-    <img src="./images/profile.jpg"
-         alt="Ayush Singh"
-         class="profile-img">
+    <img src="./images/profile.jpg" alt="Ayush Singh" class="profile-img">
 
     <h1>Hi, I'm <span>Ayush Singh</span></h1>
     <h2><span id="typed"></span></h2>
@@ -46,97 +42,161 @@
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
 <section id="about" data-aos="fade-right">
   <h2>About Me</h2>
-  <div class="about-content">
-    <p>
-      I am a BCA student with strong interest in <b>Data Analytics</b> and
-      web development. I enjoy building real-world projects and
-      continuously improving my technical skills.
-    </p>
-  </div>
+  <p>
+    I am a BCA student with strong interest in <b>Data Analytics</b> and
+    web development. I enjoy building real-world projects and
+    continuously improving my technical skills.
+  </p>
 </section>
 
-<!-- ===== PROJECTS ===== -->
 <section id="projects">
   <h2 data-aos="fade-up">Projects</h2>
-
   <div class="cards">
-    <div class="card" data-aos="zoom-in">
-      <h3>Student Management System</h3>
-      <p>System to manage student records efficiently.</p>
-    </div>
-
-    <div class="card" data-aos="zoom-in" data-aos-delay="100">
-      <h3>Library Management System</h3>
-      <p>Book issue, return and tracking system.</p>
-    </div>
-
-    <div class="card" data-aos="zoom-in" data-aos-delay="200">
-      <h3>Quiz Website</h3>
-      <p>Online quiz platform with timer and score tracking.</p>
-    </div>
-
-    <div class="card" data-aos="zoom-in" data-aos-delay="300">
-      <h3>AI Chat Bot</h3>
-      <p>Smart chatbot for user interaction and support.</p>
-    </div>
+    <div class="card"><h3>Student Management System</h3><p>System to manage student records efficiently.</p></div>
+    <div class="card"><h3>Library Management System</h3><p>Book issue, return & tracking system.</p></div>
+    <div class="card"><h3>Quiz Website</h3><p>Online quiz platform with timer & score.</p></div>
+    <div class="card"><h3>AI Chat Bot</h3><p>Smart chatbot for user interaction.</p></div>
   </div>
 </section>
 
-<!-- ===== EXPERIENCE ===== -->
-<section id="experience" data-aos="fade-left">
+<section id="experience">
   <h2>Internship</h2>
-  <p>
-    <b>Century Paper & Pulp</b><br>
-    Aditya Birla Group<br>
-    Duration: 2 Months
-  </p>
+  <p><b>Century Paper & Pulp</b><br>Aditya Birla Group<br>2 Months</p>
 </section>
 
-<!-- ===== RESUME ===== -->
-<section id="resume" data-aos="fade-up">
+<section id="resume">
   <h2>Resume</h2>
-  <p>You can download my resume below</p>
-<a href="resume.pdf" target="_blank" class="btn">
-  Download Resume
-</a>
+  <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact" data-aos="fade-up">
-  <h2>Contact Me</h2>
+<section id="contact">
+  <h2>Contact</h2>
   <p>Email: ayushsingh7788j@gmail.com</p>
   <p>Phone: 8954894011</p>
-  <p>
-    LinkedIn:
-    <a href="https://linkedin.com/in/ayush-singh-2b87732b4" target="_blank">
-      Visit Profile
-    </a>
-  </p>
 </section>
 
 <footer>
-  <p>© 2025 Ayush Singh | Portfolio</p>
+  <p>© 2025 Ayush Singh</p>
 </footer>
 
-<!-- JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="script.js"></script>
-
 <script>
   AOS.init();
+
   new Typed("#typed", {
     strings: ["Web Developer", "Data Analyst", "BCA Student"],
     typeSpeed: 60,
     backSpeed: 40,
     loop: true
   });
+
+  // Hamburger toggle
+  document.getElementById("hamburger").onclick = () =>
+    document.getElementById("nav-menu").classList.toggle("active");
 </script>
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ayush Singh | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+  <h2>Ayush.</h2>
+
+  <nav id="nav-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Internship</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-content" data-aos="fade-up">
+    <img src="./images/profile.jpg" alt="Ayush Singh" class="profile-img">
+
+    <h1>Hi, I'm <span>Ayush Singh</span></h1>
+    <h2><span id="typed"></span></h2>
+    <p>BCA 5th Semester | CGPA 7.5</p>
+
+    <a href="#contact" class="btn">Hire Me</a>
+  </div>
+</section>
+
+<section id="about" data-aos="fade-right">
+  <h2>About Me</h2>
+  <p>
+    I am a BCA student with strong interest in <b>Data Analytics</b> and
+    web development. I enjoy building real-world projects and
+    continuously improving my technical skills.
+  </p>
+</section>
+
+<section id="projects">
+  <h2 data-aos="fade-up">Projects</h2>
+  <div class="cards">
+    <div class="card"><h3>Student Management System</h3><p>System to manage student records efficiently.</p></div>
+    <div class="card"><h3>Library Management System</h3><p>Book issue, return & tracking system.</p></div>
+    <div class="card"><h3>Quiz Website</h3><p>Online quiz platform with timer & score.</p></div>
+    <div class="card"><h3>AI Chat Bot</h3><p>Smart chatbot for user interaction.</p></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Internship</h2>
+  <p><b>Century Paper & Pulp</b><br>Aditya Birla Group<br>2 Months</p>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: ayushsingh7788j@gmail.com</p>
+  <p>Phone: 8954894011</p>
+</section>
+
+<footer>
+  <p>© 2025 Ayush Singh</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  new Typed("#typed", {
+    strings: ["Web Developer", "Data Analyst", "BCA Student"],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+
+  // Hamburger toggle
+  document.getElementById("hamburger").onclick = () =>
+    document.getElementById("nav-menu").classList.toggle("active");
+</script>
+
+</body>
+</html>
